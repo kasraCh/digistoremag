@@ -8,6 +8,26 @@
         }
     </style>
 @endsection
+@push('dropify-css-stack')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css">
+@endpush
+@section('vendors-css')
+    <style>
+        .label:hover {
+            color: cyan;
+            transition: 0.5s;
+            cursor: pointer;
+            font-size: 18px;
+            text-shadow: 5px 5px 10px
+        }
+
+        .label:active {
+            transition: 0.1s;
+            color: red;
+            opacity: 0.8;
+        }
+    </style>
+@endsection
 
 
 
@@ -30,8 +50,9 @@
             </span>
             <div class="form-group mb-3 my-2">
                 <label for="image" class="label">رو من کلیک کنید و عکس مقاله را انتخاب کنید</label>
-                <input type="file" id="image" value="{{ $article->picture }}" name="picture" class="form-control"
-                    accept="image/*" style="display:none;">
+                <input type="file" id="image" value="{{ $article->picture }}" name="picture"
+                    class="form-control dropify" accept="image/*" style="display:none;" data-height="250"
+                    data-max-file-size="2M">
             </div>
 
             <div class="form-group mb-3">
@@ -89,3 +110,32 @@
             });
     </script>
 @endsection
+
+@section('vendors-script')
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                language: 'fa',
+                toolbar: [
+                    'undo', 'redo', '|',
+                    'heading', '|',
+                    'bold', 'italic', 'underline', '|',
+                    'link', 'blockQuote', 'insertTable', '|',
+                    'bulletedList', 'numberedList', '|',
+                    'alignment', '|',
+                    'codeBlock'
+                ]
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+@endsection
+
+@push('dropify-stack')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
+    <script>
+        $('.dropify').dropify();
+    </script>
+@endpush
