@@ -13,7 +13,7 @@ class UserController
     {
         $users = User::select('id','name', 'family', 'email', 'created_at')->get();
 
-        $adminRole = AdminPermissionRole::pluck('email')->toArray();
+        $adminRole = AdminPermissionRole::pluck('user_id')->toArray();
 
         return view('adminPage.user.user-list', compact('users', 'adminRole'));
     }

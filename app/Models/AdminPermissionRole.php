@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class AdminPermissionRole extends Model
 {
     protected $fillable = [
-        'email',
+        // 'email',
         'user_id'
     ];
 }

@@ -10,7 +10,6 @@ class AdminPermissionController
     public function index($email, $user_id)
     {
         $info = [
-            'email' => $email,
             'user_id' => $user_id
         ];
 

@@ -11,7 +11,6 @@ class BlogListController
     {
         $articles = Article::all();
 
-        // $article = Article::where('title', 'LIKE', '%'. $search . '%')->paginate(6);
 
         return view('adminPage.blog.blogs-list', compact('articles'));
     }

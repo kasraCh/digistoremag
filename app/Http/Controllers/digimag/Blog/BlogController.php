@@ -18,10 +18,10 @@ class BlogController
 
         $showAdminButton = false;
 
-        $adminRole = AdminPermissionRole::pluck('email')->toArray();
-        
+        $adminRole = AdminPermissionRole::pluck('user_id')->toArray();
+
         if ($user = Auth::check()) {
-            
+
             if (in_array(auth()->user()->email, $adminRole)) {
                 $showAdminButton = true;
             } else {
@@ -29,18 +29,18 @@ class BlogController
             }
 
         }
-        
+
         $blog = Article::findOrFail($id);
 
         $categorys = Category::all();
-        
+
         $author = Article::with(['user', 'category'])->find($id);
 
         $checkAuth = false;
 
         if (Auth::check()) {
             $checkAuth = true;
-        } else { 
+        } else {
             $checkAuth = false;
         }
 

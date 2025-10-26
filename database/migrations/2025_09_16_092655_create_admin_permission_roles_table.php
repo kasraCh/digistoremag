@@ -24,6 +24,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admin_permission_roles');
+        Schema::dropColumns('admin_permission_roles', 'email');
+
+        // Schema::dropIfExists('admin_permission_roles');
     }
 };

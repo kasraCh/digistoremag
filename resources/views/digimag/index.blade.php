@@ -86,7 +86,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            {{-- @dd() --}}
                                         @endforeach
 
                                     </div>
@@ -115,11 +114,7 @@
                         </div>
                     @endforeach
 
-                    {{-- <div class="bg-danger my-5 " style="bottom: 0; margin-top: auto; height: 50px;">
 
-                            {{ $article->links() }}
-
-                        </div> --}}
                 </div>
             </div>
         </div>

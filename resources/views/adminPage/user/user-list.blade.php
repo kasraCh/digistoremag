@@ -87,7 +87,7 @@
                                     <th>{{ \Morilog\Jalali\CalendarUtils::strftime('Y/m/d H:i:s', strtotime($user->created_at)) }}
                                     </th>
                                     <th>
-                                        @if (in_array($user->email, $adminRole))
+                                        @if (in_array($user->id, $adminRole))
                                             <a href="{{ route('admin.user.delete.permission', ['user_id' => $user->id]) }}"
                                                 class="btn btn-outline-success btn-sm">حذف دسترسی به پنل ادمین</a>
                                         @else

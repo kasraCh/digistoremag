@@ -12,54 +12,6 @@
                                                 src="{{ asset('digimag/assets/images/logo.png') }}" width="40"></a>
                                     </div>
                                 </div>
-                                {{-- <ul class="nav-categories ul-base">
-                                        <li>
-                                            <a href="#"><img
-                                                    src="{{ asset('digimag/assets/images/manu/square.png') }}"
-                                                    alt="manu">
-                                                جدیدترین مطالب
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="{{ asset('digimag/assets/images/manu/shape.png') }}"
-                                                    alt="manu">
-                                                علم و تکنولوژی
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="{{ asset('digimag/assets/images/manu/game.png') }}"
-                                                    alt="manu">
-                                                بازی ویدیویی
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img
-                                                    src="{{ asset('digimag/assets/images/manu/square.png') }}"
-                                                    alt="manu">
-                                                کتاب و ادبیات
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="{{ asset('digimag/assets/images/manu/film.png') }}"
-                                                    alt="manu">
-                                                هنر و سینما
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img
-                                                    src="{{ asset('digimag/assets/images/manu/gesture.png') }}"
-                                                    alt="manu">
-                                                سلامت و زیبایی
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img
-                                                    src="{{ asset('digimag/assets/images/ms-icon-144x144.png') }}"
-                                                    class="img-digimag" alt="digimag">
-                                                فروشگاه اینترنتی دیجی استور
-                                            </a>
-                                        </li>
-                                    </ul> --}}
                             </nav>
                             <div class="nav-btn nav-slider">
                                 <span class="linee1"></span>
@@ -116,7 +68,7 @@
                             <div>
                                 <a href="{{ route('logout') }}" class="btn btn-warning btn-sm" style="color: black">
                                     خروج از حساب کاربری</a>
-                                @if (Auth::check())
+                                @if ($showAdminButton)
                                     <a href="{{ route('admin.view') }}" class="btn btn-info text-dark btn-sm">پنل
                                         ادمین</a>
                                 @endif

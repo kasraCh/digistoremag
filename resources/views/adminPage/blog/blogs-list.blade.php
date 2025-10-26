@@ -30,10 +30,7 @@
                                 class="bx bx-user me-1"></i>بلاگ ها</a>
                     </li>
 
-                    {{-- <li class="nav-item">
-                        <a class="nav-link my-1 my-md-0" href="{{ route('admin.user.security.view') }}"><i
-                                class="bx bx-lock-alt me-1"></i>امنیت</a>
-                    </li> --}}
+
                 </ul>
 
                 <div class="row">

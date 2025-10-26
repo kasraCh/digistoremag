@@ -18,9 +18,6 @@
 
     @yield('content')
 
-    {{-- <div class=" mx-5 border-dark bg-dark " style="width: 150px;margin-top: auto">
-        @yield('paginator')
-    </div> --}}
 
 
     <footer class="footer ">

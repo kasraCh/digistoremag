@@ -9,7 +9,6 @@
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
             <!-- Menu -->
-            {{-- @yield('menu') --}}
             @include('adminPage.base.menu')
             <!-- / Menu -->
 
@@ -18,7 +17,6 @@
 
                 <!-- Navbar -->
 
-                {{-- @yield('navbar') --}}
                 @include('adminPage.base.navbar')
 
                 <!-- / Navbar -->

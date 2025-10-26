@@ -13,7 +13,6 @@
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 breadcrumb-wrapper mb-4">
-            {{-- <span class="text-muted fw-light">کاربر / نمایش /</span> امنیت --}}
             <span>تغیر اطلاعات کاربری</span>
         </h4>
         <div class="row gy-4">
@@ -24,9 +23,7 @@
                     <div class="card-body">
                         <div class="user-avatar-section">
                             <div class="d-flex align-items-center flex-column">
-                                {{-- <img class="img-fluid rounded my-4"
-                                    src="{{ asset('admin-page/assets/img/avatars/10.png') }}" height="110" width="110"
-                                    alt="User avatar"> --}}
+
                                 <div class="user-info text-center">
                                     <h5 class="mb-2">{{ auth()->user()->name }} {{ auth()->user()->family }}</h5>
                                     <span class="badge bg-label-secondary">نویسنده</span>
@@ -85,9 +82,7 @@
                 <!-- User Pills -->
                 <ul class="nav nav-pills flex-column flex-md-row mb-3">
 
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.view.blogs') }}"><i class="bx bx-user me-1"></i>حساب</a>
-                    </li> --}}
+
 
                     <li class="nav-item">
                         <a class="nav-link active my-1 my-md-0" href="{{ route('admin.user.security.view') }}"><i

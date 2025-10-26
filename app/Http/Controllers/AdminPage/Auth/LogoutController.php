@@ -10,7 +10,7 @@ class LogoutController
     public function logout()
     {
         Auth::logout();
-
+        
         return to_route('digimag.index');
     }
 }

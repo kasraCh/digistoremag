@@ -31,7 +31,6 @@ class SecurityController
 
     public function editname(EditNameRequest $request)
     {
-        // dd($request->all());   
 
         $request->validated();
 

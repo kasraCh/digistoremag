@@ -17,7 +17,7 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (AdminPermissionRole::where('email', '=', auth()->user()->email)->count() > 0) {
+        if (AdminPermissionRole::where('user_id', '=', auth()->user()->id)->count() > 0) {
 
             return $next($request);
             

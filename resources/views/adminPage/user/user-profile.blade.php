@@ -66,16 +66,12 @@
                         <a class="nav-link active my-1 my-md-0" href="{{ route('admin.user.profile') }}"><i
                                 class="bx bx-user me-1"></i> پروفایل</a>
                     </li>
-                    {{-- <li class="nav-item">
-                      <a class="nav-link" href="pages-profile-teams.html"><i class="bx bx-group me-1"></i> تیم‌ها</a>
-                    </li> --}}
+
                     <li class="nav-item">
                         <a class="nav-link" href="pages-profile-projects.html"><i class="bx bx-grid-alt me-1"></i>
                             پروژه‌ها</a>
                     </li>
-                    {{-- <li class="nav-item">
-                      <a class="nav-link" href="pages-profile-connections.html"><i class="bx bx-link-alt me-1"></i> اتصالات</a>
-                    </li> --}}
+
                 </ul>
             </div>
         </div>
