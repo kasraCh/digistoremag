@@ -46,8 +46,6 @@ class BlogController
 
         $comments = Comment::where('id', $id)->select('comment')->get();
 
-        // dd($comments->all();
-
         return view('digimag.blog.blog', compact('article', 'user', 'showAdminButton', 'categorys', 'blog', 'author', 'checkAuth', 'comments'));
     }
 }

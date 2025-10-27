@@ -1,1 +1,3 @@
 forigen key database .
+
+2 . in if i should removed the %user = Auth::check().

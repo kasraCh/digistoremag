@@ -12,18 +12,15 @@ class SearchController
 {
     public function index(Request $request)
     {
+        $adminRole = AdminPermissionRole::pluck('user_id')->toArray();
+
         $showAdminButton = false;
 
-        $adminRole = AdminPermissionRole::pluck('email')->toArray();
-        
         if ($user = Auth::check()) {
-            
-            if (in_array(auth()->user()->email, $adminRole)) {
-                $showAdminButton = true;
-            } else {
-                $showAdminButton = false;
-            }
 
+            if (in_array(auth()->user()->id, $adminRole)) {
+                $showAdminButton = true;
+            }
         }
 
         $categoryMenu = Category::all();

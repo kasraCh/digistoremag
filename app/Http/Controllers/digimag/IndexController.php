@@ -24,7 +24,7 @@ class IndexController
 
        $showAdminButton = false;
 
-       if ($user = Auth::check()) {
+       if (Auth::check()) {
 
            if (in_array(auth()->user()->id, $adminRole)) {
                $showAdminButton = true;
@@ -42,21 +42,20 @@ class IndexController
 
         $lastThreeItem = Article::orderby('created_at', 'desc')->take(3)->get();
 
-        return view('digimag.index', compact('article', 'user', 'categoryMenu', 'blogCategory', 'lastThreeItem', 'items', 'showAdminButton'));
+        return view('digimag.index', compact('article', 'categoryMenu', 'blogCategory', 'lastThreeItem', 'items', 'showAdminButton'));
     }
 
     public function showCategory(Request $categorys)
     {
-        $adminRole = AdminPermissionRole::pluck('email')->toArray();
+        $adminRole = AdminPermissionRole::pluck('user_id')->toArray();
 
-        if ($user = Auth::check()) {
+        $showAdminButton = false;
 
-            if (in_array(auth()->user()->email, $adminRole)) {
+        if (Auth::check()) {
+
+            if (in_array(auth()->user()->id, $adminRole)) {
                 $showAdminButton = true;
-            } else {
-                $showAdminButton = false;
             }
-
         }
 
         $blogCategory = $categorys->category;
@@ -71,7 +70,7 @@ class IndexController
 
         $categoryMenu = Category::withCount('articles')->get();
 
-        return view('digimag.blog.searched-blog', compact('article', 'user', 'categoryMenu', 'blogCategory'));
+        return view('digimag.blog.searched-blog', compact('article', 'categoryMenu', 'blogCategory', 'showAdminButton'));
 
     }
 }
