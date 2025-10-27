@@ -42,12 +42,10 @@
                                         <h1 class="txt-entry-title">{{ $blog->title }}</h1>
                                         <div class="social-act">
                                             <div class="bookmark-wrapper wishlist-btn login-required">
-                                                {{-- <span class="social-act-txt">افزودن به لیست علاقه‌مندی ها</span> --}}
-                                                {{-- <i class="fa fa-bookmark-o"></i> --}}
+
                                                 <div class="social-act-sep"></div>
                                                 <span class="popularity pull-left">
                                                     <span class="popularity-likes">
-                                                        {{-- <i class="fa fa-heart-o"></i> --}}
                                                     </span>
                                                 </span>
                                             </div>
@@ -68,9 +66,9 @@
                                             {{ \Morilog\Jalali\CalendarUtils::strftime('Y/m/d H:i:s', strtotime($blog->created_at)) }}
                                         </span>
                                     </div>
-                                    <div class="post-attachment">
+                                    <div class="post-attachment my-3" style="width: 717px; height: 403px;">
                                         <img src="{{ asset('admin-page/assets/upload/pictures/' . $blog->picture) }}"
-                                            alt="topics" class="post-module-img wp-post-image">
+                                            alt="topics" class="post-module-img wp-post-image w-100 h-100">
                                     </div>
                                     <div class="post-module-content">
 
