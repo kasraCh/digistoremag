@@ -20,7 +20,7 @@ class BlogController
 
         $adminRole = AdminPermissionRole::pluck('user_id')->toArray();
 
-        if ($user = Auth::check()) {
+        if (Auth::check()) {
 
             if (in_array(auth()->user()->email, $adminRole)) {
                 $showAdminButton = true;
@@ -46,6 +46,6 @@ class BlogController
 
         $comments = Comment::where('id', $id)->select('comment')->get();
 
-        return view('digimag.blog.blog', compact('article', 'user', 'showAdminButton', 'categorys', 'blog', 'author', 'checkAuth', 'comments'));
+        return view('digimag.blog.blog', compact('article', 'showAdminButton', 'categorys', 'blog', 'author', 'checkAuth', 'comments'));
     }
 }

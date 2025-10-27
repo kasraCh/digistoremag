@@ -11,7 +11,6 @@ class BlogListController
     {
         $articles = Article::all();
 
-
         return view('adminPage.blog.blogs-list', compact('articles'));
     }
 }

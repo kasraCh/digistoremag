@@ -16,7 +16,7 @@ class SearchController
 
         $showAdminButton = false;
 
-        if ($user = Auth::check()) {
+        if (Auth::check()) {
 
             if (in_array(auth()->user()->id, $adminRole)) {
                 $showAdminButton = true;
@@ -31,6 +31,6 @@ class SearchController
 
         $blogCategory = false;
         
-        return view('digimag.blog.searched-blog', compact('article', 'user', 'showAdminButton', 'categoryMenu', 'blogCategory'));
+        return view('digimag.blog.searched-blog', compact('article', 'showAdminButton', 'categoryMenu', 'blogCategory'));
     }
 }
