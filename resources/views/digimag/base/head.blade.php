@@ -52,4 +52,30 @@
             /* display: flex; */
             flex-direction: column;
         }
+
+        .custom-select {
+            padding: 8px 36px 8px 12px;
+            /* فضای سمت راست بیشتر برای فلش */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+            transition: all 0.2s ease;
+            appearance: none;
+            /* فلش پیش‌فرض مرورگر رو حذف می‌کنه */
+            cursor: pointer;
+
+            /* فلش سفارشی */
+            background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            /* فلش در سمت راست و وسط */
+            background-size: 14px;
+        }
+
+        .custom-select:hover {
+            background-color: #eee;
+        }
     </style>
