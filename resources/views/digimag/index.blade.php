@@ -98,7 +98,7 @@
 
             <div class="tiles my-5">
                 <p>مورد پسند ترین مقالات</p>
-                <a href="#">مشاهده همه مقالات</a>
+                <a href="{{ route('digimag.blog.all') }}">مشاهده همه مقالات</a>
                 <div class="tiles-wrapper my-2">
                     @foreach ($article as $item)
                         <div class="col-6 col-lg-4 pull-right pr-0 pl-0 my-2">
@@ -113,8 +113,6 @@
                             </a>
                         </div>
                     @endforeach
-
-
                 </div>
             </div>
         </div>

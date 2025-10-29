@@ -13,7 +13,7 @@ use App\Http\Controllers\AdminPage\Category\CategoryController;
 use App\Http\Controllers\AdminPage\User\AdminPermissionController;
 use App\Http\Controllers\AdminPage\User\ProfileController;
 use App\Http\Controllers\AdminPage\User\SearchController;
-use App\Http\Controllers\digimag\Blog\BlogController as BlogBlogController;
+use App\Http\Controllers\digimag\Blog\BlogController as DigimagBlogController;
 use App\Http\Controllers\digimag\Blog\CommentController;
 use App\Http\Controllers\digimag\Blog\SearchController as BlogSearchController;
 use App\Http\Controllers\digimag\IndexController as DigimagIndexController;
@@ -76,7 +76,7 @@ Route::get('admin-delete-permission/{user_id}', [AdminPermissionController::clas
 
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 
-Route::get('blog/{id}', [BlogBlogController::class, 'index'])->name('digimag.blog.view');
+Route::get('blog/{id}', [DigimagBlogController::class, 'index'])->name('digimag.blog.view');
 
 Route::post('blog/{id}/comment', [CommentController::class, 'index'])->name('digimag.blog.comment');
 
@@ -85,3 +85,5 @@ Route::get('admin/user/search', [SearchController::class, 'index'])->name('admin
 Route::get('blog-list/search', [BlogSearchController::class, 'index'])->name('digimag.blog.search');
 
 Route::get('blog/{category}/category', [DigimagIndexController::class, 'showCategory'])->name('digimag.blog.category');
+
+Route::get('blogs', [DigimagBlogController::class, 'allBlog'])->name('digimag.blog.all');

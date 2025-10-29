@@ -1,3 +1,5 @@
 forigen key database .
 
 2 . in if i should removed the %user = Auth::check().
+
+3. change BlogController in digimag folder and adminPage folder name.
