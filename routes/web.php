@@ -87,3 +87,5 @@ Route::get('blog-list/search', [BlogSearchController::class, 'index'])->name('di
 Route::get('blog/{category}/category', [DigimagIndexController::class, 'showCategory'])->name('digimag.blog.category');
 
 Route::get('blogs', [DigimagBlogController::class, 'allBlog'])->name('digimag.blog.all');
+
+// Route::get('blogs/{sort}', [DigimagBlogController::class, 'sortBlog'])->name('digimag.blog.sort.new');

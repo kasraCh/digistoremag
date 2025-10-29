@@ -10,9 +10,16 @@
                     </a>
                 </div>
             </div>
+            <form method="GET" action="">
+                <select name="sort" onchange="this.form.submit()">
+                    <option value="">همه</option>
+                    <option value="newest" {{ request('sort') == 'newest' ? 'selected' : '' }}>جدیدترین</option>
+                    <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>قدیمی‌ترین</option>
+                </select>
+            </form>
             <div class="tiles my-5">
+                {{-- <a href="{{ route('digimag.blog.sort.new', ['sort' => 'new']) }}">اسا</a> --}}
                 <p>تمامی مقالات موجود در سایت</p>
-                {{-- <a href="#">مشاهده همه مقالات</a> --}}
                 <div class="tiles-wrapper my-2">
                     @foreach ($article as $item)
                         <div class="col-6 col-lg-4 pull-right pr-0 pl-0 my-2">

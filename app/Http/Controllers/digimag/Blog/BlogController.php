@@ -49,7 +49,7 @@ class BlogController
         return view('digimag.blog.blog', compact('article', 'showAdminButton', 'categorys', 'blog', 'author', 'checkAuth', 'comments'));
     }
 
-    public function allBlog() 
+    public function allBlog(Request $request) 
     {
         $adminRole = AdminPermissionRole::pluck('user_id')->toArray();
 
@@ -62,7 +62,15 @@ class BlogController
             }
         }
 
-        $article = Article::all();
+        $query = Article::query();
+
+        if ($request->sort == 'newest') {
+            $query->orderBy('created_at', 'desc');
+        } elseif ($request->sort == 'oldest') {
+            $query->orderBy('created_at', 'asc');
+        }
+
+        $article = $query->get();
 
         $categoryMenu = Category::all();
 
@@ -71,5 +79,10 @@ class BlogController
         $blogCategory = null;
 
         return view('digimag.blog.all-blogs', compact('categoryMenu', 'blogCategory', 'showAdminButton', 'article'));
+    }
+
+    public function sortBlog($sort) 
+    {
+        return $sort;
     }
 }
