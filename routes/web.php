@@ -1,23 +1,22 @@
 <?php
 
-use App\Http\Controllers\AdminPage\Auth\LogoutController;
-use App\Http\Controllers\AdminPage\IndexController;
-use App\Http\Controllers\AdminPage\User\UserController;
-use App\Http\Controllers\AdminPage\User\SecurityController;
-use App\Http\Controllers\AdminPage\Auth\RegisterController;
-use App\Http\Controllers\AdminPage\Auth\LoginController;
-use App\Http\Controllers\AdminPage\Blog\BlogController;
-use App\Http\Controllers\AdminPage\Blog\BlogListController;
-use App\Http\Controllers\AdminPage\Blog\UserBlogsController;
-use App\Http\Controllers\AdminPage\Category\CategoryController;
-use App\Http\Controllers\AdminPage\User\AdminPermissionController;
-use App\Http\Controllers\AdminPage\User\ProfileController;
-use App\Http\Controllers\AdminPage\User\SearchController;
-use App\Http\Controllers\digimag\Blog\BlogController as DigimagBlogController;
-use App\Http\Controllers\digimag\Blog\CommentController;
-use App\Http\Controllers\digimag\Blog\SearchController as BlogSearchController;
-use App\Http\Controllers\digimag\IndexController as DigimagIndexController;
-use Faker\Guesser\Name;
+use App\Http\Controllers\Admin\Auth\LogoutController;
+use App\Http\Controllers\Admin\IndexController;
+use App\Http\Controllers\Admin\User\UserController;
+use App\Http\Controllers\Admin\User\SecurityController;
+use App\Http\Controllers\Admin\Auth\RegisterController;
+use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\Blog\BlogController;
+use App\Http\Controllers\Admin\Blog\BlogListController;
+use App\Http\Controllers\Admin\Blog\UserBlogsController;
+use App\Http\Controllers\Admin\Category\CategoryController;
+use App\Http\Controllers\Admin\User\AdminPermissionController;
+use App\Http\Controllers\Admin\User\ProfileController;
+use App\Http\Controllers\Admin\User\SearchController;
+use App\Http\Controllers\site\Blog\BlogController as DigimagBlogController;
+use App\Http\Controllers\site\Blog\CommentController;
+use App\Http\Controllers\site\Blog\SearchController as BlogSearchController;
+use App\Http\Controllers\site\IndexController as DigimagIndexController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '', 'as' => 'admin.'], function () {
@@ -32,8 +31,8 @@ Route::group(['prefix' => '', 'as' => 'admin.'], function () {
     
 });
 
+// panel Admin Routes
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth' , 'admin']] , function () {
-
     Route::get('/',[IndexController::class, 'index'])->name('view');
 
     Route::get('blogs', [BlogListController::class, 'index'])->name('view.blogs');
