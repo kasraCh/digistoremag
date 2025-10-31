@@ -28,13 +28,16 @@
             padding-bottom: 20px;
         }
 
+<<<<<<< HEAD:resources/views/Site/base/head.blade.php
+=======
+        
+>>>>>>> a35ec7dfa29a60cdf6e6ffcdfa33a61dbe99137e:resources/views/digimag/base/head.blade.php
         html {
             height: 100%;
         }
 
         body {
             min-height: 100%;
-            /* display: flex; */
             flex-direction: column;
         }
 
@@ -49,10 +52,19 @@
             transition: all 0.2s ease;
             appearance: none;
             cursor: pointer;
+<<<<<<< HEAD:resources/views/Site/base/head.blade.php
             background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
             background-repeat: no-repeat;
             background-position: right 10px center;
 
+=======
+
+            
+            background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            
+>>>>>>> a35ec7dfa29a60cdf6e6ffcdfa33a61dbe99137e:resources/views/digimag/base/head.blade.php
             background-size: 14px;
         }
 
