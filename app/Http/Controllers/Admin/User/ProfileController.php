@@ -8,6 +8,6 @@ class ProfileController
 {
     public function index()
     {
-        return view('adminPage.user.user-profile');
+        return view('admin.user.user-profile');
     }
 }

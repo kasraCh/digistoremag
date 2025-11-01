@@ -15,7 +15,7 @@ class SecurityController
     {
         $blogs = Article::select('id', auth()->user()->id);
 
-        return view('adminPage.user.user-security', compact('blogs'));
+        return view('admin.user.user-security', compact('blogs'));
     }
 
     public function editPassword(ChangeUserPasswordRequest $request)

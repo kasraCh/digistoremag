@@ -11,7 +11,7 @@ class RegisterController
 {
     public function index()
     {
-        return view('adminPage.auth.register');
+        return view('admin.auth.register');
     }
 
     public function action(UserRegisterRequest $request)

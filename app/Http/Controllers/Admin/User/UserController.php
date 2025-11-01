@@ -15,7 +15,7 @@ class UserController
 
         $adminRole = AdminPermissionRole::pluck('user_id')->toArray();
 
-        return view('adminPage.user.user-list', compact('users', 'adminRole'));
+        return view('admin.user.user-list', compact('users', 'adminRole'));
     }
     
 }

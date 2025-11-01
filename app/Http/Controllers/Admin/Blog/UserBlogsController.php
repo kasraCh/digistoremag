@@ -11,6 +11,6 @@ class UserBlogsController
     {
         $articles = Article::all();
 
-        return view('adminPage.blog.user-blogs', compact('articles'));
+        return view('admin.blog.user-blogs', compact('articles'));
     }
 }

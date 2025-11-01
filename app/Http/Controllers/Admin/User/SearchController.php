@@ -18,6 +18,6 @@ class SearchController
 
         $users = User::where('name', 'LIKE', '%'. $search . '%')->orWhere('email', 'LIKE', '%'. $search . '%')->get();
 
-        return view('adminPage.user.user-list', compact('users', 'adminRole'));
+        return view('admin.user.user-list', compact('users', 'adminRole'));
     }
 }

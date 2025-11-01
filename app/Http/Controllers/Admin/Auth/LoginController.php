@@ -10,7 +10,7 @@ class LoginController
 {
     public function index()
     {
-        return view('adminPage.auth.login');
+        return view('admin.auth.login');
     }
 
     public function login(UserLoginRequest $request)

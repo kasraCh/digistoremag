@@ -15,7 +15,7 @@ class BlogController
     {
         $categories = Category::all();
 
-        return view('adminPage.blog.blog-store', compact('categories'));
+        return view('admin.blog.blog-store', compact('categories'));
     }
 
     public function store(ArticleStoreRequest $request)
@@ -64,7 +64,7 @@ class BlogController
 
         $categories = Category::all();
 
-        return view('adminPage.blog.article_edit', compact('article', 'categories'));
+        return view('admin.blog.article_edit', compact('article', 'categories'));
     }
 
     public function edit(ArticleEditRequest $request, $id)

@@ -12,7 +12,7 @@ class CategoryController
     {
         $categories = Category::all();
 
-        return view('adminPage.category.index', compact('categories'));
+        return view('admin.category.index', compact('categories'));
     }
 
     public function store(CategoryStoreRequest $request)
