@@ -42,8 +42,10 @@ class BlogController
         }
 
         $comments = Comment::where('id', $id)->select('comment')->get();
+
+        $lastThreeItem = Article::orderby('created_at', 'desc')->take(4)->get();
         
-        return view('site.blog.blog', compact('article', 'showAdminButton', 'categorys', 'blog', 'author', 'checkAuth', 'comments'));
+        return view('site.blog.blog', compact('article', 'showAdminButton', 'categorys', 'blog', 'author', 'checkAuth', 'comments', 'lastThreeItem'));
     }
 
     public function allBlog(Request $request) 

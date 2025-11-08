@@ -40,21 +40,16 @@
                             <img src="{{ asset('digimag/assets/images/logo.png') }}" alt="logo">
                         </a>
                     </div>
-                    <div class="col-lg-8 col-md-8 col-xs-12 pull-left res-div">
-                        <div class="hashtag">
-                            <div class="hashtag-title">جستجو میان هزاران مقاله :‌ ‌‌</div>
-                            <div class="hashtag-wrapper">
-                                <form action="{{ route('digimag.blog.search') }}" method="GET">
-
-                                    <input class="bg-dark text-light rounded w-auto text-right pr-4" type="search"
-                                        name="search" placeholder="جستجوی مقاله">
-
-                                    <button class="btn btn-dark" type="submit">جستجو</button>
-
-                                </form>
-                            </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 pull-left res-div my-3">
+                        <div class="search-box">
+                            <div class="search-title">جستجو میان هزاران مقاله:</div>
+                            <form action="{{ route('digimag.blog.search') }}" method="GET" class="search-form">
+                                <input type="search" name="search" placeholder="جستجوی مقاله..." class="search-input">
+                                <button type="submit" class="search-btn">جستجو</button>
+                            </form>
                         </div>
                     </div>
+
                 </div>
             </div>
 

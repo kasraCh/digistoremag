@@ -18,6 +18,70 @@
     <link rel="stylesheet" href="{{ asset('digimag/assets/css/responsive.css') }}">
 
     <style>
+        .search-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px 20px;
+            text-align: right;
+        }
+
+        .search-title {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: flex-start;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 14px;
+            text-align: right;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            border-color: #ff3b3b;
+            outline: none;
+        }
+
+        .search-btn {
+            background: #4b4dc6;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .search-btn:hover {
+            background: #3d3b8b;
+        }
+
+        @media (max-width: 768px) {
+            .search-form {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-btn {
+                width: 100%;
+            }
+        }
+
         .sticky {
             position: sticky;
             top: 20px;

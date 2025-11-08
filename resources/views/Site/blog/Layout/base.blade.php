@@ -13,10 +13,12 @@
 
     @yield('content')
 
+    <div class="">
 
-    <footer class="footer">
-        @include('site.base.footer')
-    </footer>
+        <footer class="footer">
+            @include('site.base.footer')
+        </footer>
+    </div>
 
     @include('site.base.script')
 </body>
