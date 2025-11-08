@@ -127,4 +127,10 @@
              </ul>
          </li>
 
+         <div class="container" style="margin-top: 150px; ">
+             <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+             <a href="">خروج از حساب کاربری</a>
+         </div>
+
  </aside>

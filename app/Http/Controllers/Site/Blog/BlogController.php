@@ -22,12 +22,9 @@ class BlogController
 
         if (Auth::check()) {
 
-            if (in_array(auth()->user()->email, $adminRole)) {
+            if (in_array(auth()->user()->id, $adminRole)) {
                 $showAdminButton = true;
-            } else {
-                $showAdminButton = false;
             }
-
         }
 
         $blog = Article::findOrFail($id);
@@ -45,7 +42,7 @@ class BlogController
         }
 
         $comments = Comment::where('id', $id)->select('comment')->get();
-
+        
         return view('site.blog.blog', compact('article', 'showAdminButton', 'categorys', 'blog', 'author', 'checkAuth', 'comments'));
     }
 

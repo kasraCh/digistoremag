@@ -9,12 +9,12 @@
                             <a href="#" title="دیجی استور مگ">MAG</a>
                         </li>
                         <li class="stick-menu-item search-btn">
-                            <a href="#">
+                            <a href="{{ route('digimag.index') }}">
                                 <img src="{{ asset('digimag/assets/images/header/search-menu.png') }}" alt="search">
                             </a>
                         </li>
                         <li class="stick-menu-item login-popup-btn">
-                            <a href="#">
+                            <a href="{{ route('digimag.blog.category', ['category' => $blog->category->category]) }}">
                                 <img src="{{ asset('digimag/assets/images/header/user.png') }}" alt="user">
                             </a>
                         </li>
@@ -36,13 +36,12 @@
                                         <li class="breadcrumb-item active" aria-current="page">{{ $blog->title }}</li>
                                     </ol>
                                 </nav>
-                                <div class="sep"></div>
+                                <div class="sep my-5"></div>
                                 <article>
+                                    <h1 class="txt-entry-title">{{ $blog->title }}</h1>
                                     <div class="post-module-title">
-                                        <h1 class="txt-entry-title">{{ $blog->title }}</h1>
                                         <div class="social-act">
                                             <div class="bookmark-wrapper wishlist-btn login-required">
-
                                                 <div class="social-act-sep"></div>
                                                 <span class="popularity pull-left">
                                                     <span class="popularity-likes">
@@ -148,6 +147,122 @@
                                     </div>
                                 </div>
                             @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-12 pull-left sticky-sidebar">
+            <div class="post-nav">
+                <div class="post-nav-top">
+                    <div class="text-center">
+                        <div class="widget-suggestion widget card">
+                            <header class="card-header promo-single-headline product-header">
+                                <h3 class="card-title">
+                                    <span class="bold">جدیدترین</span>
+                                    <span>مقالات در دیجی مگ</span>
+                                </h3>
+                            </header>
+                            <div id="suggestion-slider" class="owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                                <div class="owl-stage-outer">
+                                    <div class="owl-stage"
+                                        style="transform: translate3d(1369px, 0px, 0px); transition: all 0.25s ease 0s; width: 2190px;">
+                                        <div class="owl-item cloned" style="width: 273.75px;">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img src="{{ asset('digimag/assets/images/topics/post-nav/1.jpg') }}"
+                                                        class="w-100" alt="topics">
+                                                </a>
+                                                <h3 class="product-title">
+                                                    <a href="#">گوشی موبایل شیائومی مدل Redmi Note 8
+                                                        M1908C3JG دو سیم‌ کارت ظرفیت 128 گیگابایت</a>
+                                                </h3>
+                                                <div class="price">
+                                                    <span class="amount">6,899,000
+                                                        <span>تومان</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 273.75px;">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img src="{{ asset('digimag/assets/images/topics/post-nav/1.jpg') }}"
+                                                        class="w-100" alt="topics">
+                                                </a>
+                                                <h3 class="product-title">
+                                                    <a href="#">گوشی موبایل شیائومی مدل Redmi Note 8 Pro
+                                                        m1906g7G دو سیم‌ کارت ظرفیت 128 گیگابایت</a>
+                                                </h3>
+                                                <div class="price">
+                                                    <span class="amount">7,309,000
+                                                        <span>تومان</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item" style="width: 273.75px;">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img src="{{ asset('digimag/assets/images/topics/post-nav/1.jpg') }}"
+                                                        class="w-100" alt="topics">
+                                                </a>
+                                                <h3 class="product-title">
+                                                    <a href="#">گوشی موبایل سامسونگ مدل Galaxy A10s
+                                                        SM-A107F/DS دو سیم کارت ظرفیت 32 گیگابایت</a>
+                                                </h3>
+                                                <div class="price">
+                                                    <span class="amount">4,299,000
+                                                        <span>تومان</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item" style="width: 273.75px;">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img src="{{ asset('digimag/assets/images/topics/post-nav/1.jpg') }}"
+                                                        class="w-100" alt="topics">
+                                                </a>
+                                                <h3 class="product-title">
+                                                    <a href="#">گوشی موبایل شیائومی مدل Redmi Note 9
+                                                        M2003J15SS دو سیم‌ کارت ظرفیت 64 گیگابایت</a>
+                                                </h3>
+                                                <div class="price">
+                                                    <span class="amount">6,152,000
+                                                        <span>تومان</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item" style="width: 273.75px;">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img src="{{ asset('digimag/assets/images/topics/post-nav/1.jpg') }}"
+                                                        class="w-100" alt="topics">
+                                                </a>
+                                                <h3 class="product-title">
+                                                    <a href="#">گوشی موبایل سامسونگ مدل Galaxy A51
+                                                        SM-A515F/DSN دو سیم کارت ظرفیت 128گیگابایت</a>
+                                                </h3>
+                                                <div class="price">
+                                                    <span class="amount">8,399,000
+                                                        <span>تومان</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="home-menu-bottom-sidebar my-3" class="sidebar-digimag">
+                        <div class="home-menu-bottom-widget">
+                            <a href="#" class="promotion">
+                                <img src="{{ asset('digimag/assets/images/sidebar/buying-guide-under-menu-tile-2.jpg') }}"
+                                    class="promotion-img" alt="menu">
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@
 <html lang="fa" class="light-style layout-navbar-fixed layout-menu-fixed" dir="rtl" data-theme="theme-default"
     data-assets-path="{{ asset('admin-page/assets') }}/" data-template="vertical-menu-template">
 
-@include('adminPage.base.head')
+@include('admin.base.head')
 
 <body>
     <!-- Layout wrapper -->
